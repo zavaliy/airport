@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectDescription>
+  <name>airport-web-server</name>
+  <comment>A module representing the web server side of the application.
+It binds together all platform core and application specific web resources in to a single standalone application server. NO_M2ECLIPSE_SUPPORT: Project files created with the maven-eclipse-plugin are not supported in M2Eclipse.</comment>
+  <projects>
+    <project>airport-dao</project>
+    <project>airport-pojo-bl</project>
+    <project>platform-pojo-bl</project>
+    <project>platform-dao</project>
+    <project>airport-web-ui</project>
+    <project>platform-web-ui</project>
+    <project>platform-web-resources</project>
+  </projects>
+  <buildSpec>
+    <buildCommand>
+      <name>org.eclipse.jdt.core.javabuilder</name>
+    </buildCommand>
+  </buildSpec>
+  <natures>
+    <nature>org.eclipse.jdt.core.javanature</nature>
+  </natures>
+</projectDescription>
