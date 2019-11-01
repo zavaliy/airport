@@ -1,3 +1,9 @@
+import '/resources/polymer/@polymer/iron-icon/iron-icon.js';
+import '/resources/polymer/@polymer/iron-iconset-svg/iron-iconset-svg.js';
+import {html} from '/resources/polymer/@polymer/polymer/lib/utils/html-tag.js';
+const template = html`<iron-iconset-svg name='otherMainMenu' size='1000'> 
+ <svg> 
+ <defs> 
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <svg
    xmlns:osb="http://www.openswatchbook.org/uri/2009/osb"
@@ -1116,3 +1122,7 @@
     </g>
   </g>
 </svg>
+</defs> 
+ </svg> 
+ </iron-iconset-svg>`;
+document.head.appendChild(template.content);

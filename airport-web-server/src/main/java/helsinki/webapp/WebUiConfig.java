@@ -83,10 +83,18 @@ public class WebUiConfig extends AbstractWebUiConfig {
 
         // Configure application menu
         configDesktopMainMenu().
+            addModule("Asset Acquisition").
+                description("Functionality for dealing with the Assets").
+                icon("mainMenu:equipment").
+                detailIcon("mainMenu:equipment").bgColor("#FFE680").captionBgColor("#FFD42A").menu()
+                .addMenuItem("Personnel").description("Personnel related data")
+                    .addMenuItem("Personnel").description("Personnel Centre").centre(personWebUiConfig.centre).done()
+                .done()
+            .done().done().
             addModule("Users / Personnel").
                 description("Provides functionality for managing application security and personnel data.").
-                icon("mainMenu:help").
-                detailIcon("mainMenu:help").
+                icon("otherMainMenu:about").
+                detailIcon("otherMainMenu:about").
                 bgColor("#FFE680").
                 captionBgColor("#FFD42A").menu()
                 .addMenuItem("Personnel").description("Personnel related data")
@@ -97,7 +105,15 @@ public class WebUiConfig extends AbstractWebUiConfig {
                     .addMenuItem("User Roles").description("User roles centre").centre(userRoleWebUiConfig.centre).done()
                 .done()
             .done().done()
-        .setLayoutFor(Device.DESKTOP, null, "[[[]]]")
+            .addModule("Table Codes").
+            description("Functionality for dealing with the Assets").
+            icon("mainMenu:tablecodes").
+            detailIcon("mainMenu:equipment").bgColor("#FFE680").captionBgColor("#FFD42A").menu()
+                .addMenuItem("Personnel").description("Personnel related data")
+                    .addMenuItem("Personnel").description("Personnel Centre").centre(personWebUiConfig.centre).done()
+                .done()
+            .done().done()
+        .setLayoutFor(Device.DESKTOP, null, "[[[]],[[]],[[]]]")
         .setLayoutFor(Device.TABLET, null, "[[[]]]")
         .setLayoutFor(Device.MOBILE, null, "[[[]]]")
         .minCellWidth(100).minCellHeight(148).done();
